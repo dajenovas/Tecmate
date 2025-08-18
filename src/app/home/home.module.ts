@@ -6,7 +6,9 @@ import { HomeMainComponent } from './home-main/home-main.component';
 import { SharedModule } from '../shared/shared.module';
 import { BackgroundComponent } from './background/background.component';
 import { OpenComponent } from './open/open.component';
-import { AboutComponent } from './about/about.component';
+import { OverviewComponent } from './overview/overview.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { AboutComponent } from './about/about.component';
     HomeMainComponent,
     BackgroundComponent,
     OpenComponent,
-    AboutComponent
+    OverviewComponent,
+    SponsorComponent,
+    CountdownComponent
   ],
   imports: [
     CommonModule,
