@@ -7,6 +7,8 @@ import { LoaderComponent } from './loader/loader.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EventsModule } from './events/events.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     HomeModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    EventsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
