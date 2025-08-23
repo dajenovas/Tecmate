@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeMainComponent } from './home/home-main/home-main.component';
 import { AboutMainComponent } from './about/about-main/about-main.component';
+import { EventsMainComponent } from './events/events-main/events-main.component';
 
 const routes: Routes = [
   {
@@ -17,8 +18,8 @@ const routes: Routes = [
     component:AboutMainComponent
   },
   {
-    path:'home',
-    component: HomeMainComponent
+    path:'events',
+    component: EventsMainComponent
   }
 ];
 

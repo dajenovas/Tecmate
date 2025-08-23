@@ -7,8 +7,8 @@ import { LoaderComponent } from './loader/loader.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EventsModule } from './events/events.module';
 import { AboutModule } from './about/about.module';
+import { EventsModule } from './events/events.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,10 @@ import { AboutModule } from './about/about.module';
     HomeModule,
     SharedModule,
     FontAwesomeModule,
-    EventsModule,
-    AboutModule
+    AboutModule,
+    EventsModule
   ],
-  providers: [],
+  providers: [BrowserModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
