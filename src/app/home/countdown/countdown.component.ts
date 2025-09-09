@@ -6,7 +6,7 @@ import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit, Hos
   styleUrl: './countdown.component.scss'
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  targetDate = new Date(2025, 9, 9, 9, 0, 0); // 🎯 Your target date/time
+  targetDate = new Date(2025, 10, 8, 9, 0, 0); // 🎯 Your target date/time
   // 2025 → Year
   // 8   → September (0 = Jan, so 8 = Sep)
   // 9   → Day = 9

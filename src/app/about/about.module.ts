@@ -22,6 +22,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutRoutingModule,
     SharedModule,
     FontAwesomeModule
+  ],
+  exports : [
+    BackgroundComponent
   ]
 })
 export class AboutModule { }

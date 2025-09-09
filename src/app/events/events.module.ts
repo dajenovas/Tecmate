@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from "../shared/shared.module";
 import { TechnicalEventsComponent } from './technical-events/technical-events.component';
 import { NonTechnicalComponent } from './non-technical/non-technical.component';
+import { AboutModule } from '../about/about.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NonTechnicalComponent } from './non-technical/non-technical.component';
     SharedModule,
     CommonModule,
     EventsRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AboutModule
 ]
 })
 export class EventsModule { }
