@@ -16,6 +16,7 @@
     opacity: 0;
     visibility: hidden;
   }
+
   animation: fadeout .5s ease forwards 2.5s;
 }
 
@@ -112,11 +113,11 @@
 }
 
 @keyframes fadeout {
-  0%{
+  0% {
     opacity: 1;
   }
 
-  100%{
+  100% {
     opacity: 0;
   }
 }
@@ -188,7 +189,11 @@
 @media screen and (max-width:450px) {
   .title {
     h1 {
-      font-size: 50px;
+      font-size: 35px;
     }
+  }
+
+  .load {
+    width: 300px;
   }
 }
