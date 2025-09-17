@@ -20,7 +20,7 @@
 }
 
 .event {
-    height: 400px;
+    height: 300px;
     width: 300px;
     border: none;
     overflow: hidden;
@@ -34,8 +34,8 @@
         position: relative;
         z-index: -1;
         transition: 1s;
-        scale: 1.5;
-        height: 400px;
+        scale: 1.1;
+        height: 300px;
         width: 300px;
     }
 }
@@ -51,10 +51,6 @@
         display: block;
     }
 
-    .strip {
-        animation: fade-out 0.5s ease-in forwards;
-        // display: none;
-    }
 }
 
 .event-details {
@@ -94,24 +90,6 @@
     }
 }
 
-.strip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    position: absolute;
-    bottom: 20px;
-    z-index: 999;
-    width: 100%;
-    backdrop-filter: blur(8px) saturate(200%);
-    -webkit-backdrop-filter: blur(8px) saturate(200%);
-    background-color: rgba(116, 99, 99, 0.68);
-    border: 1px solid rgba(255, 246, 246, 0.125);
-
-    h1 {
-        font-size: 16px;
-    }
-}
 
 @keyframes fade-in {
     from {
