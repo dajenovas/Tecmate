@@ -1,0 +1,23 @@
+<!-- Raw Header -->
+
+<div class="container"> <!-- Header Container -->
+  <div class="header"> <!-- Header -->
+    <div class="logo"> <!-- Logo -->
+      <h1>T</h1>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()"> <!-- Ham Menu for Tablet and Mobile Designs -->
+      &#9776;
+    </div>
+    <div class="navigation" [ngClass]="{ 'open': menuOpen }"> <!-- Page Navigation -->
+      <ul>
+        <li routerLink="/home" (click)="closeMenu()"><a>Home</a></li> <!-- HOME -->
+        <li routerLink="/about" (click)="closeMenu()"><a>About</a></li> <!-- ABOUT US -->
+        <li routerLink="/events" (click)="closeMenu()"><a>Events</a></li> <!-- EVENTS -->
+        <li routerLink="/contact" (click)="closeMenu()"><a>Contact</a></li> <!-- CONTACT -->
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="header-border-line"></div> <!-- Border Line For Seperation ( Only Down ) -->
+
+<!-- Header Ends -->

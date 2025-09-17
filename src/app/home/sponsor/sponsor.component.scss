@@ -1,0 +1,128 @@
+.heading {
+    text-align: center;
+}
+
+.sponsor {
+    background: linear-gradient(to bottom, #0a0a0a, #202020);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10%;
+    color: white;
+}
+
+.sponsor-console {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+}
+
+.spon {
+    height: 150px;
+    width: 150px;
+    box-shadow: 1px 2px 26px 10px rgba(0, 0, 0, 0.59);
+    margin: 20px;
+    transition: 1s;
+    text-align: center;
+}
+
+.sponsor-1{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+}
+
+.sponsor-2{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.sponsor-3{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.sponsor-4{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+.sponsor-name {
+    margin-top: 30px;
+    font-size: 16px;
+    color: white;
+    transition: .5s;
+}
+
+.spon:hover {
+    transform: translateY(-20px);
+
+    .sponsor-name {
+        transition-delay: 0.3s;
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width:950px) {
+    .sponsor-console {
+        flex-direction: column;
+    }
+
+    .spon {
+        height: 250px;
+        width: 225px;
+        border-radius: 20px;
+    }
+
+    .sponsor-logo {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .heading {
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    .spon {
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .sponsor-logo {
+        margin-top: 10%;
+        width: 80%;
+
+        img {
+            padding: 20px;
+        }
+    }
+}
