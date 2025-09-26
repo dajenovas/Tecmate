@@ -1,25 +1,15 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
-import * as AOS from 'aos';
 
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements AfterViewInit {
+export class OverviewComponent {
   @ViewChild('particleCanvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private particlesArray: Particle[] = [];
   private numParticles = 100;
-
-  ngAfterViewInit() {
-    // AOS init
-    AOS.init({ duration: 500, once: true });
-
-    // Canvas init
-    this.setupCanvas();
-    this.animate();
-  }
 
   private setupCanvas() {
     const canvas = this.canvasRef.nativeElement;

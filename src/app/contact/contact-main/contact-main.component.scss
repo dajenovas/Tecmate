@@ -1,0 +1,29 @@
+.container {
+    margin: 0px 10%;
+    color: white;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 40px;
+    h1 {
+        font-size: 50px;
+    }
+}
+
+.wrapper {
+    display: flex;
+}
+
+.location {
+    margin: 50px 0px 0px 50px;
+}
+
+iframe {
+    height: 400px;
+    width: 600px;
+}
+
+.right {
+    margin: 50px;
+}

@@ -4,13 +4,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #0d0d0d; // background color
+  background: #0d0d0d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  background-color: #0d0d0d;
+  background-image: radial-gradient(rgba(0, 255, 85, 0.5) 1px, transparent 2px);
+  background-size: 80px 80px;
+  overflow: hidden;
 
   &.fade-out {
     opacity: 0;
@@ -38,7 +42,6 @@
   }
 }
 
-
 .load {
   animation: fadeIn 1s ease-in forwards;
   border: 2px solid white;
@@ -51,7 +54,7 @@
   animation: filler 2.4s ease-in forwards;
   background: #009dff;
   height: 6px;
-  width: 398px;
+  width: 100%; // use relative width instead of hardcoded px
   border-radius: 10px;
   margin: 0.5px;
 }
@@ -68,132 +71,49 @@
   filter: drop-shadow(0px 0px 10px #009dff);
 }
 
-
+/* Animations */
 @keyframes filler {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-  }
+  from { width: 0%; }
+  to { width: 100%; }
 }
 
-/* Animations */
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slide-up {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0px); opacity: 1; }
 }
 
 @keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
+/* Title letters animation (reduced repetition) */
 .title-text {
   opacity: 0;
 }
 
-.title-text-1 {
-  animation: slide-up .8s ease-in forwards;
-}
-
-.title-text-2 {
-  animation: slide-up .8s ease-in .1s forwards;
-}
-
-.title-text-3 {
-  animation: slide-up .8s ease-in .2s forwards;
-}
-
-.title-text-4 {
-  animation: slide-up .8s ease-in .3s forwards;
-}
-
-.title-text-5 {
-  animation: slide-up .8s ease-in .4s forwards;
-}
-
-.title-text-6 {
-  animation: slide-up .8s ease-in .5s forwards;
-}
-
-.title-text-7 {
-  animation: slide-up .8s ease-in .6s forwards;
-}
-
-.title-text-8 {
-  animation: slide-up .8s ease-in .7s forwards;
-}
-
-.title-text-9 {
-  animation: slide-up .8s ease-in .8s forwards;
-}
-
-.title-text-10 {
-  animation: slide-up .8s ease-in .9s forwards;
-}
-
-.title-text-11 {
-  animation: slide-up .8s ease-in 1s forwards;
-}
-
-
-.loader-wrapper {
-  background-color: #0d0d0d;
-  background-image: radial-gradient(rgba(0, 255, 85, 0.5) 1px, transparent 2px);
-  background-size: 80px 80px;
-  overflow: hidden;
-}
-
-@media screen and (max-width:990px) {
-  .title {
-    h1 {
-      font-size: 50px;
-    }
+@for $i from 1 through 11 {
+  .title-text-#{$i} {
+    animation: slide-up .8s ease-in #{($i - 1) * 0.1}s forwards;
   }
 }
 
-@media screen and (max-width:450px) {
-  .title {
-    h1 {
-      font-size: 35px;
-    }
-  }
+/* Responsive */
+@media screen and (max-width: 990px) {
+  .title h1 { font-size: 50px; }
+}
 
-  .load {
-    width: 300px;
-  }
+@media screen and (max-width: 450px) {
+  .title h1 { font-size: 35px; }
+  .load { width: 300px; }
 }
