@@ -9,13 +9,15 @@ import { HomeModule } from '../home/home.module';
 import { BackgroundComponent } from './background/background.component';
 import { OrganisersComponent } from './organisers/organisers.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MemberListComponent } from './member-list/member-list.component';
 
 
 @NgModule({
   declarations: [
     AboutMainComponent,
     BackgroundComponent,
-    OrganisersComponent
+    OrganisersComponent,
+    MemberListComponent
   ],
   imports: [
     CommonModule,

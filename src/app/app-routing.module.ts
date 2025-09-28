@@ -14,6 +14,7 @@ import { ClickclashComponent } from './event-list/clickclash/clickclash.componen
 import { CrescendoarenaComponent } from './event-list/crescendoarena/crescendoarena.component';
 import { FilmyfrenzyComponent } from './event-list/filmyfrenzy/filmyfrenzy.component';
 import { CluexpressComponent } from './event-list/cluexpress/cluexpress.component';
+import { Fixtures } from './testing/fixtures/fixtures';
 
 const routes: Routes = [
   {
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path:'cluexpress',
     component:CluexpressComponent
+  },
+  {
+    path:'fixture',
+    component:Fixtures
   }
 ];
 

@@ -9,6 +9,7 @@ import { OpenComponent } from './open/open.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { AboutModule } from '../about/about.module';
 
 
 @NgModule({
