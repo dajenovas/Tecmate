@@ -10,11 +10,10 @@ import { AmongcodersComponent } from './event-list/amongcoders/amongcoders.compo
 import { EyeonaiComponent } from './event-list/eyeonai/eyeonai.component';
 import { ThegridvortexComponent } from './event-list/thegridvortex/thegridvortex.component';
 import { BooyahblitzComponent } from './event-list/booyahblitz/booyahblitz.component';
-import { ClickclashComponent } from './event-list/clickclash/clickclash.component';
 import { CrescendoarenaComponent } from './event-list/crescendoarena/crescendoarena.component';
-import { FilmyfrenzyComponent } from './event-list/filmyfrenzy/filmyfrenzy.component';
 import { CluexpressComponent } from './event-list/cluexpress/cluexpress.component';
 import { Fixtures } from './testing/fixtures/fixtures';
+import { EventCard } from './testing/event-card/event-card';
 
 const routes: Routes = [
   {
@@ -62,29 +61,23 @@ const routes: Routes = [
     component: BooyahblitzComponent
   },
   {
-    path:'clickclash',
-    component:ClickclashComponent
-  },
-  {
     path:'crescendoarena',
     component: CrescendoarenaComponent
-  },
-  {
-    path:'filmyfrenzy',
-    component: FilmyfrenzyComponent
   },
   {
     path:'cluexpress',
     component:CluexpressComponent
   },
 
-
   // Testing Routes
-
 
   {
     path:'fixture',
     component:Fixtures
+  },
+  {
+    path:'eventCard',
+    component: EventCard
   }
 ];
 

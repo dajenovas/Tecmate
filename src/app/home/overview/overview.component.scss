@@ -199,29 +199,65 @@
   }
 
   .event-image {
-    height: 300px;
-    width: 300px;
+    img {
+      height: 300px;
+      width: 300px;
+    }
   }
 
   .event-info {
     margin: 20px -10px 0;
     width: 100%;
+    // h2 {
+    //   font-size: 14px;
+    // }
+    // p {
+    //   font-size: 10px;
+    // }
+  }
+
+  .header {
+    img {
+      height: 50px;
+    }
+    h1 {
+      font-size: 18px;
+    }
   }
 
   .college-content {
     flex-direction: column;
   }
 
-  .college-img img {
-    width: 100%;
+  .college-description {
+    p {
+      font-size: 14px;
+    }
   }
 
+  .college-img img {
+    width: 80%;
+  }
 
+  .line {
+    display: none;
+  }
 
   .logo-image img {
     height: 70px;
   }
 
+  .department-content {
+    // display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .department {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -269,11 +305,11 @@
   }
 
   .header img {
-    height: 70px;
+    height: 40px;
   }
 
   .header h1 {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .college {
@@ -282,10 +318,14 @@
 
   .college-img img {
     height: 150px;
+    width: 100%;
+    margin: 0px;
   }
 
   .college-description p {
     font-size: 10px;
+    margin: 0px;
+    width: 100%;
   }
 }
 
@@ -322,7 +362,6 @@
 }
 
 .vision-container, .mission-container {
-  
   border-radius: 20px;
   height: max-content;
   background: red;
