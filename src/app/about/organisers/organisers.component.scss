@@ -79,7 +79,8 @@
   padding: 25px;
   text-align: center;
   width: 25%;
-  min-width: 250px;
+  width: 300px;
+  height: 375px;
   transition: .5s;
   box-shadow: 0 0 5px 0px #0090b8bf;
   animation: appear linear;
@@ -247,8 +248,8 @@
 
 
 .col-1-1 {
-  flex-wrap: wrap;
+  display: flex;
   .card {
-    width: 30%;
+    // width: 30%;
   }
 }

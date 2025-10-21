@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="heading">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="wrapper">
+        <div class="left">
+            <div class="location">
+                <!-- location.component.html -->
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1234567890!2d80.165940!3d12.914772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ea09cb2abf5%3A0x81ad80cde6aa3fef!2sNew%20Prince%20Shri%20Bhavani%20College%20Of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v169xxxxxxx"
+                        width="400" height="300" style="border:0; border-radius:10px;" loading="lazy" allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="contact-form">
+                <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+                    <div class="name">
+                        <div class="form firstname">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.firstName"
+                                placeholder="First Name" required />
+                        </div>
+
+                        <div class="form lastname">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" [(ngModel)]="formData.lastName"
+                                placeholder="Last Name" required />
+                        </div>
+                    </div>
+
+                    <div class="form email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" [(ngModel)]="formData.email"
+                            placeholder="youremailid@gmail.com" required />
+                    </div>
+                    <div class="form phone-number">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="formData.phoneNumber"
+                            placeholder="Phone Number" required />
+                    </div>
+                    <div class="form msg">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" [(ngModel)]="formData.message"
+                            placeholder="Leave us a message" rows="4" required></textarea>
+                    </div>
+
+                    <div class="submit">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

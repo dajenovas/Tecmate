@@ -1,3 +1,4 @@
+/* ========== Global Container ========== */
 .container {
   position: relative;
   z-index: 1;
@@ -6,71 +7,44 @@
   margin-bottom: 50px;
 }
 
-/* Animations */
-@keyframes appear {
-  from {
-    scale: 0.5;
-    opacity: 0;
-  }
-
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Heading */
+/* ========== Headings ========== */
 .heading {
   margin-bottom: 20px;
-
-  h1 {
-    font-size: 40px;
-  }
+  text-align: center;
 }
 
-/* College Section */
+.heading h1 {
+  font-size: 40px;
+}
+
+/* ========== College Section ========== */
 .college {
   margin: 50px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 50px;
-  // animation: appear linear;
-  // animation-timeline: view();
-  // animation-range: entry 0% cover 40%;
 }
 
 .college-content {
   display: flex;
+  justify-content: center;
 }
 
 .college-img img {
   margin-left: 50px;
   border-radius: 20px;
   height: 200px;
+  width: auto;
 }
 
 .college-description p {
   text-align: justify;
-  margin-top: 10px;
+  margin: 10px 0 0 20px;
   width: 92%;
-  margin-left: 20px;
 }
 
-/* Header */
+/* ========== Header Section ========== */
 .header {
   display: flex;
   align-items: center;
@@ -78,58 +52,53 @@
   text-align: center;
   margin: 40px 0;
   width: 100%;
-
-  img {
-    height: 100px;
-  }
-
-  h1 {
-    font-size: 22.5px;
-  }
 }
 
-/* Event Section */
+.header img {
+  height: 100px;
+}
+
+.header h1 {
+  font-size: 22.5px;
+}
+
+/* ========== Event Section ========== */
 .event {
   width: 100%;
   display: flex;
   justify-content: space-around;
   border-radius: 50px;
+  flex-wrap: wrap;
 }
 
 .event-image {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  img {
-    height: 280px;
-    width: 280px;
-    border-radius: 50%;
-  }
+.event-image img {
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
 }
 
 .event-info {
   width: 65%;
-  margin-left: 30px;
-  margin-top: 40px;
+  margin: 40px 0 0 30px;
   text-align: center;
-
-  h2 {
-    margin-bottom: 10px;
-  }
-
-  p {
-    text-align: justify;
-    font-size: 16px;
-  }
 }
 
-/* Logo */
-.logo-image img {
-  height: 150px;
+.event-info h2 {
+  margin-bottom: 10px;
 }
 
-/* View Events */
+.event-info p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* ========== Buttons ========== */
 .view-events {
   display: flex;
   justify-content: center;
@@ -137,7 +106,6 @@
   margin: 20px;
 }
 
-/* Button */
 .button {
   position: relative;
   display: flex;
@@ -151,188 +119,47 @@
   width: 200px;
   cursor: pointer;
   text-decoration: none;
+  overflow: hidden;
+}
 
-  span {
-    position: relative;
-    z-index: 1;
+.button span a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  border-radius: 9px;
+  transition: 0.5s;
 }
 
 .button::before {
-  content: "";
-  position: absolute;
   inset: 1px;
   background: #272727;
-  border-radius: 9px;
-  transition: 0.5s;
+}
+
+.button::after {
+  inset: 0;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  opacity: 0;
+  filter: blur(20px);
 }
 
 .button:hover::before {
   opacity: 0.7;
 }
 
-.button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-  border-radius: 9px;
-  opacity: 0;
-  filter: blur(20px);
-  transition: 0.5s;
-}
-
 .button:hover::after {
   opacity: 1;
 }
 
-/* ================= Responsive ================= */
-@media screen and (max-width: 990px) {
-  .event {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .event-image {
-    img {
-      height: 300px;
-      width: 300px;
-    }
-  }
-
-  .event-info {
-    margin: 20px -10px 0;
-    width: 100%;
-    // h2 {
-    //   font-size: 14px;
-    // }
-    // p {
-    //   font-size: 10px;
-    // }
-  }
-
-  .header {
-    img {
-      height: 50px;
-    }
-    h1 {
-      font-size: 18px;
-    }
-  }
-
-  .college-content {
-    flex-direction: column;
-  }
-
-  .college-description {
-    p {
-      font-size: 14px;
-    }
-  }
-
-  .college-img img {
-    width: 80%;
-  }
-
-  .line {
-    display: none;
-  }
-
-  .logo-image img {
-    height: 70px;
-  }
-
-  .department-content {
-    // display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .department {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .heading {
-    text-align: center;
-
-    h1 {
-      font-size: 25px;
-    }
-  }
-
-  .event-image,
-  .event-image img {
-    height: 250px;
-    width: 250px;
-  }
-
-  .event-info {
-    margin: 30px 0 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-      font-size: 15px;
-      width: 80%;
-    }
-
-    p {
-      font-size: 10px;
-      margin-top: 30px;
-      width: 80%;
-    }
-  }
-
-  .header img {
-    height: 40px;
-  }
-
-  .header h1 {
-    font-size: 12px;
-  }
-
-  .college {
-    width: 80%;
-  }
-
-  .college-img img {
-    height: 150px;
-    width: 100%;
-    margin: 0px;
-  }
-
-  .college-description p {
-    font-size: 10px;
-    margin: 0px;
-    width: 100%;
-  }
-}
-
-// Department Styling
-
+/* ========== Department Section ========== */
 .department {
-  color: white;
+  color: #fff;
 }
 
 .department-heading {
@@ -344,69 +171,40 @@
   animation-range: entry 0% cover 40%;
 }
 
-.logo {
-  img {
-    height: 100px;
-  }
+.department-heading img {
+  height: 100px;
 }
 
 .department-content {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
-  margin-top: 50px;
+  margin: 50px 20px 20px;
+  flex-wrap: wrap;
 }
 
-.left, .right{
+.left, .right {
   width: 49%;
 }
 
-.vision-container, .mission-container {
-  border-radius: 20px;
-  height: max-content;
-  background: red;
-  text-align: center;
-  padding: 20px;
-  /* From https://css.glass */
-  background: #2f2f2f8f;
+.vision-container,
+.mission-container {
   border-radius: 16px;
+  background: #2f2f2f8f;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid #2f2f2f;
   margin: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .line {
   background-color: gray;
-  border-radius: 50%;
   width: 2px;
-  // height: 100px;
+  border-radius: 50%;
   animation: starter linear;
   animation-timeline: view();
   animation-range: entry 20% cover 60%;
-}
-
-@keyframes starter {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 600px;
-  }
-}
-
-.content {
-  text-align: center;
-  margin-top: 25px;
-
-  ul {
-    margin-left: 20px;
-  }
 }
 
 .ball {
@@ -421,65 +219,97 @@
   animation-range: entry 0% cover 50%;
 }
 
-.ball-1 {
-  top: 160px;
-}
+.ball-1 { top: 160px; }
+.ball-2 { top: 400px; }
 
-.ball-2 {
-  top: 400px;
-}
+.left { animation: left-appear linear; }
+.right { animation: right-appear linear; }
 
-.left {
-  animation: left-appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-.right {
-  animation: right-appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes left-appear {
-  0%{
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes right-appear {
-  0%{
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-.vision {
-  text-align: left;
-  ul {
-    li {
-      margin-top: 10px;
-      font-size: 15px;
-    }
-  }
+.vision ul li {
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 .coding-gif {
-  img {
-    width: 80%;
-  }
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.coding-gif img {
+  width: 80%;
+}
+
+/* ========== Keyframes ========== */
+@keyframes starter {
+  from { height: 0; }
+  to { height: 600px; }
+}
+
+@keyframes left-appear {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes right-appear {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes appear {
+  from { scale: 0.5; opacity: 0; }
+  to { scale: 1; opacity: 1; }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 990px) {
+  .event { flex-direction: column; align-items: center; }
+  .event-image img { height: 300px; width: 300px; }
+  .event-info { width: 100%; margin: 20px 0 0; }
+  .header img { height: 50px; }
+  .header h1 { font-size: 18px; }
+  .college-content { flex-direction: column; align-items: center; }
+  .college-description p { font-size: 14px; width: 90%; }
+  .college-img img { width: 80%; margin: 0; }
+  .logo-image img { height: 70px; }
+  .department { display: none; }
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0;
+    text-align: center;
+  }
+
+  .heading h1 { font-size: 25px; }
+
+  .event-image img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .event-info {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .event-info h2 {
+    font-size: 15px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .event-info p {
+    font-size: 10px;
+    margin-top: 30px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .header img { height: 40px; }
+  .header h1 { font-size: 12px; }
+
+  .college { width: 80%; margin: 0px 10%; }
+  .college-img img { height: 150px; width: 100%; margin: 0; }
+  .college-description p { font-size: 10px; width: 100%; margin: 0; }
 }

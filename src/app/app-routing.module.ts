@@ -12,8 +12,6 @@ import { ThegridvortexComponent } from './event-list/thegridvortex/thegridvortex
 import { BooyahblitzComponent } from './event-list/booyahblitz/booyahblitz.component';
 import { CrescendoarenaComponent } from './event-list/crescendoarena/crescendoarena.component';
 import { CluexpressComponent } from './event-list/cluexpress/cluexpress.component';
-import { Fixtures } from './testing/fixtures/fixtures';
-import { EventCard } from './testing/event-card/event-card';
 
 const routes: Routes = [
   {
@@ -67,17 +65,6 @@ const routes: Routes = [
   {
     path:'cluexpress',
     component:CluexpressComponent
-  },
-
-  // Testing Routes
-
-  {
-    path:'fixture',
-    component:Fixtures
-  },
-  {
-    path:'eventCard',
-    component: EventCard
   }
 ];
 

@@ -12,8 +12,6 @@ import { EventsModule } from './events/events.module';
 import { ContactModule } from './contact/contact.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { EventListModule } from './event-list/event-list.module';
-import { TestingModule } from './testing/testing-module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,8 +32,7 @@ import { TestingModule } from './testing/testing-module';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    EventListModule,
-    TestingModule
+    EventListModule
   ],
   providers: [BrowserModule],
   bootstrap: [AppComponent]
